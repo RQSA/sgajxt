@@ -1,0 +1,31 @@
+/* 左侧导航不隐藏 */
+@media (min-width:0px) {
+  .bs-docs-sidebar .nav > .active > ul {
+    display: block;
+  }  
+}
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+	 .bs-docs-sidebar.affix {
+    position: fixed; /* Undo the static from mobile first approach */
+    top: 80px;
+  }
+}
+/*百度地图*/
+#allmap {
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	margin:0;
+	margin-top: 20px;
+	font-family:"微软雅黑";
+}
+.anchorBL{
+	display:none;
+}
+.my_none{
+	display:none !important;
+}
+.col-md-10{
+	min-height: 300px;
+}

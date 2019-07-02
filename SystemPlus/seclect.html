@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicon.ico">
+    <title>韶关一建企业有限公司项目质量安全检查管理系统</title> 
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/docs.css"/>
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker-bs3.css"/>
+    <!-- Custom styles for bootstrap-table -->
+    <link href="css/bootstrap-table.min.css" rel="stylesheet">
+    <link href="css/mycss.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+  </head>
+
+  <body>
+  	<!-- 头部导航条 -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.php">韶关一建</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.php">项目管理</a></li>
+            <li class="active"><a href="seclect.html">综合查询</a></li>
+            <li><a href="system.html">系统管理</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="container" class="container">
+    	<div class="row">
+    		<!--左侧导航菜单 -->
+    		<div class="col-md-2">
+    			<div class="bs-docs-sidebar affix" role="complementary">
+    				<ul class="nav bs-docs-sidenav">
+    					<li><a href="wxycx.html">危险源查询</a></li>    					
+    					<li><a href="jxsbcx.html">机械设备查询</a></li>    					
+    					<li  class="active"><a href="../seclect.html">巡查整改查询</a></li>
+    				</ul>
+    			</div>    			
+    		</div><!--左侧导航菜单 -->
+    		
+    		<!-- 内容区域 -->
+    		
+			  <div class="col-md-10">
+			  <div id="xmdj" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">巡查整改查询</h3>
+				</div>
+				<div class="panel-body">
+    			
+    			<div>
+    			  
+							  <div class="well">
+               <form class="form-horizontal">
+                 <fieldset>
+                  <div class="control-group">
+                    <label class="control-label" for="reservationtime">时间段选择</label>
+                    <div class="controls">
+                     <div class="input-prepend input-group">
+                       <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                       <input type="text" style="width: 400px" name="reservation" id="reservationtime" class="form-control" value="08/01/2016 1:00 PM - 08/01/2016 1:30 PM"  class="span4"/>
+                     </div>
+                    </div>
+                  </div>
+                 </fieldset>
+                 
+                 <div  style="display:inline">
+                
+							  <div>
+							  	<fieldset style="padding:7px;">
+
+
+
+省 市 区选择：<select name="province6"></select><select name="city6"></select><select name="area6"></select><br>
+
+
+</fieldset>
+
+
+</div>
+							  <div class="btn-group "  ">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+										分公司选择
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li><a href="#">中山</a></li>
+										<li><a href="#">惠州</a></li>
+										<li><a href="#">香港</a></li>
+										<li><a href="#">澳门</a></li>
+										<li><a href="#">北京</a></li>
+										<li><a href="#">深圳</a></li>
+									</ul>
+							  </div>
+							  <div class="btn-group "  ">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									 项目选择
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li><a href="#">中山</a></li>
+										<li><a href="#">惠州</a></li>
+										<li><a href="#">香港</a></li>
+										<li><a href="#">澳门</a></li>
+										<li><a href="#">北京</a></li>
+										<li><a href="#">深圳</a></li>
+									</ul>
+							  </div>
+							  </div>
+               </form>
+            </div> 
+    			</div>
+    			<div class="row">
+    				<div class="col-lg-3">
+	    			<table class="table  table-bordered">
+							<tr class="">
+							  <td class="col-xs-4">通知</td>
+							  <td class="col-xs-4">份</td>
+							</tr>
+							<tr>
+							  <td><a href="#" data-toggle="modal" data-target="#myModal">整改通知</a></td>
+							  <td >20</td>
+							</tr>			
+							<tr>
+							  <td><a href="#" data-toggle="modal" data-target="#myModal1">回复</a></td>
+							  <td>20</td>
+							</tr>	
+							<tr>
+							  <td><a href="#" data-toggle="modal" data-target="#myModal2">延期</td></a>
+							  <td>20</td>
+							</tr>	
+							<tr>
+							  <td ><a href="#" data-toggle="modal" data-target="#myModal3">逾期</td></a>
+							  <td>20</td>
+							  <tr>
+							  <td><a href="#" data-toggle="modal" data-target="#myModal4">已完成</td></a>
+							  <td >20</td>
+							</tr>	
+							<tr>
+							  <td><a href="#" data-toggle="modal" data-target="#myModal5">未完成</td></a>
+							  <td>20</td>
+							</tr>	
+							</tr>	
+						</table></div>
+						<div id="container1" class="col-lg-8 col-md-offset-8" style="width:650px; height: 400px; margin: 0 auto" ></div>
+    				</div>
+    				
+    				
+    				<div>
+		    				<!-- 模态框（Modal） -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+											&times;
+										</button>
+										<h4 class="modal-title" id="myModalLabel">
+											通知
+										</h4>
+									</div>
+									<div class="modal-body">
+										  <table class="table table-bordered">
+	
+												<thead>
+													<tr>
+														<th>通知编号</th>
+														<th>检查日期</th>
+														<th>检查人</th>
+														<th>整改</th>
+														<th>回复</th>
+														<th>批复</th>
+														<th>新建人</th>
+														<th>日期</th>
+														
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1212</td>
+														<td>4545</td>
+														<td>45</td>
+														<td>45</td>
+														<td>Bangalore</td>
+														<td>560001</td>
+														<td>Tanmay</td>
+														<td>Bangalore</td>
+														
+													</tr>
+													<tr>
+														<td>1212</td>
+														<td>4545</td>
+														<td>45</td>
+														<td>45</td>
+														<td>Bangalore</td>
+														<td>560001</td>
+														<td>Tanmay</td>
+														<td>Bangalore</td>
+													</tr>
+													<tr>
+														<td>1212</td>
+														<td>4545</td>
+														<td>45</td>
+														<td>45</td>
+														<td>Bangalore</td>
+														<td>560001</td>
+														<td>Tanmay</td>
+														<td>Bangalore</td>
+													</tr>
+												</tbody>
+											</table>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+										</button>
+										
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal -->
+							</div>
+							
+							
+							
+							<div>	<!-- 模态框（Modal） -->
+						<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+											&times;
+										</button>
+										<h4 class="modal-title" id="myModalLabel1">
+											回复
+										</h4>
+									</div>
+									<div class="modal-body">
+										  <table class="table table-bordered">
+	
+												<thead>
+													<tr>
+														<th>通知编号</th>
+														<th>检查日期</th>
+														<th>检查人</th>
+														<th>整改</th>
+														<th>回复</th>
+														<th>批复</th>
+														<th>新建人</th>
+														<th>日期</th>
+														
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1212</td>
+														<td>4545</td>
+														<td>45</td>
+														<td>45</td>
+														<td>Bangalore</td>
+														<td>560001</td>
+														<td>Tanmay</td>
+														<td>Bangalore</td>
+														
+													</tr>
+													
+												</tbody>
+											</table>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+										</button>
+										
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal -->
+							</div>
+							
+							
+							<div>	<!-- 模态框（Modal） -->
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+											&times;
+										</button>
+										<h4 class="modal-title" id="myModalLabel2">
+											延期
+										</h4>
+									</div>
+									<div class="modal-body">
+										  <table class="table table-bordered">
+	
+												<thead>
+													<tr>
+														<th>通知编号</th>
+														<th>检查日期</th>
+														<th>检查人</th>
+														<th>整改</th>
+														<th>回复</th>
+														<th>批复</th>
+														<th>新建人</th>
+														<th>日期</th>
+														
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>L</td>
+														<td>W</td>
+														<td>45</td>
+														<td>45</td>
+														<td>Bangalore</td>
+														<td>560001</td>
+														<td>Tanmay</td>
+														<td>Bangalore</td>
+														
+													</tr>
+													<tr>
+														<td>1212</td>
+														<td>4545</td>
+														<td>45</td>
+														<td>45</td>
+														<td>Bangalore</td>
+														<td>560001</td>
+														<td>Tanmay</td>
+														<td>Bangalore</td>
+														
+													</tr>
+													
+												</tbody>
+											</table>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+										</button>
+										
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal -->
+							</div>
+							
+							<div>	<!-- 模态框（Modal） -->
+						<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+											&times;
+										</button>
+										<h4 class="modal-title" id="myModalLabel3">
+											逾期
+										</h4>
+									</div>
+									<div class="modal-body">
+										  <table class="table table-bordered">
+	
+												<thead>
+													<tr>
+														<th>通知编号</th>
+														<th>检查日期</th>
+														<th>检查人</th>
+														<th>整改</th>
+														<th>回复</th>
+														<th>批复</th>
+														<th>新建人</th>
+														<th>日期</th>
+														
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1212</td>
+														<td>4545</td>
+														<td>45</td>
+														<td>45</td>
+														<td>Bangalore</td>
+														<td>560001</td>
+														<td>Tanmay</td>
+														<td>Bangalore</td>
+														
+													</tr>
+													<tr>
+														<td>1212</td>
+														<td>4545</td>
+														<td>45</td>
+														<td>45</td>
+														<td>Bangalore</td>
+														<td>560001</td>
+														<td>Tanmay</td>
+														<td>Bangalore</td>
+														
+													</tr>
+													
+												</tbody>
+											</table>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+										</button>
+										
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal -->
+							</div>
+							
+							<div>	<!-- 模态框（Modal） -->
+						<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+											&times;
+										</button>
+										<h4 class="modal-title" id="myModalLabel4">
+											已完成
+										</h4>
+									</div>
+									<div class="modal-body">
+										  <table class="table table-bordered">
+	
+												<thead>
+													<tr>
+														<th>通知编号</th>
+														<th>检查日期</th>
+														<th>检查人</th>
+														<th>整改</th>
+														<th>回复</th>
+														<th>批复</th>
+														<th>新建人</th>
+														<th>日期</th>
+														
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1212</td>
+														<td>4545</td>
+														<td>45</td>
+														<td>45</td>
+														<td>Bangalore</td>
+														<td>560001</td>
+														<td>Tanmay</td>
+														<td>Bangalore</td>
+														
+													</tr>
+													<tr>
+														<td>1212</td>
+														<td>4545</td>
+														<td>45</td>
+														<td>45</td>
+														<td>Bangalore</td>
+														<td>560001</td>
+														<td>Tanmay</td>
+														<td>Bangalore</td>
+														
+													</tr>
+													
+												</tbody>
+											</table>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+										</button>
+										
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal -->
+							</div>
+							
+							<div>	<!-- 模态框（Modal） -->
+						<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+											&times;
+										</button>
+										<h4 class="modal-title" id="myModalLabel5">
+											未完成
+										</h4>
+									</div>
+									<div class="modal-body">
+										  <table class="table table-bordered">
+	
+												<thead>
+													<tr>
+														<th>通知编号</th>
+														<th>检查日期</th>
+														<th>检查人</th>
+														<th>整改</th>
+														<th>回复</th>
+														<th>批复</th>
+														<th>新建人</th>
+														<th>日期</th>
+														
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1212</td>
+														<td>4545</td>
+														<td>45</td>
+														<td>45</td>
+														<td>Bangalore</td>
+														<td>560001</td>
+														<td>Tanmay</td>
+														<td>Bangalore</td>
+														
+													</tr>
+													<tr>
+														<td>1212</td>
+														<td>4545</td>
+														<td>45</td>
+														<td>45</td>
+														<td>Bangalore</td>
+														<td>560001</td>
+														<td>Tanmay</td>
+														<td>Bangalore</td>
+														
+													</tr>
+													
+												</tbody>
+											</table>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+										</button>
+										
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal -->
+							</div>
+							</div>
+							</div>
+							</div>
+    					
+    				<!-- 内容区域 -->
+    			</div>
+    			</div>
+    	</div>
+    </div>
+    
+    
+				    
+    
+    <footer class="bs-docs-footer" role="contentinfo"></footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+   <!--js of bootstrap-table -->
+   <script src="js/bootstrap-table.min.js"></script>
+   <!--js of bootstrap-table—export -->
+   <script src="js/export/tableExport.js"></script>
+   <script src="js/export/bootstrap-table-export.js"></script>
+   <script src="js/bootstrap-table-zh-CN.min.js"></script>
+   <script type="text/javascript" src="js/moment.js"></script>
+   
+   <script language="javascript" src="js/PCASClass.js"></script>
+
+	 <script type="text/javascript" src="js/daterangepicker.js"></script>  
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/mySidenav.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {    	
+    	$("footer").load("footer.html");
+    	//$(".col-md-10").load("ProjectPlus/table.html?flag=1");  	
+    	
+    
+    });
+    </script>
+    
+    <script language="JavaScript">
+			$(document).ready(function() {  
+			   var chart = {
+			       plotBackgroundColor: null,
+			       plotBorderWidth: null,
+			       plotShadow: false
+			   };
+			   var title = {
+			      text: '韶关一建通知比例'   
+			   };      
+			   var tooltip = {
+			      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			   };
+			   var plotOptions = {
+			      pie: {
+			         allowPointSelect: true,
+			         cursor: 'pointer',
+			         dataLabels: {
+			            enabled: true,
+			            format: '<b>{point.name}%</b>: {point.percentage:.1f} %',
+			            style: {
+			               color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+			            }
+			         }
+			      }
+			   };
+			   var series= [{
+			      type: 'pie',
+			      name: '所占比例',
+			      data: [
+			         ['整改通知',   45.0],
+			         ['延期',       26.8],
+			         {
+			            name: '未完成',
+			            y: 12.8,
+			            sliced: true,
+			            selected: true
+			         },
+			         ['逾期',    8.5],
+			         ['回复',     6.2],
+			         ['已完成',   0.7]
+			      ]
+			   }];     
+			      
+			   var json = {};   
+			   json.chart = chart; 
+			   json.title = title;     
+			   json.tooltip = tooltip;  
+			   json.series = series;
+			   json.plotOptions = plotOptions;
+			   $('#container1').highcharts(json);  
+			});
+</script>
+  		 <script type="text/javascript">
+        $(document).ready(function() {
+        $('#reservationtime').daterangepicker({
+          timePicker: true,
+          timePickerIncrement: 30,
+          format: 'MM/DD/YYYY h:mm A'
+          }, function(start, end, label) {
+          console.log(start.toISOString(), end.toISOString(), label);
+          });
+            });
+   
+     </script>
+  
+  <script language="javascript" defer>
+
+				     
+				new PCAS("province6","city6","area6","请选择省份","请选择市区","请选择地区");
+
+			
+				
+				</script>
+
+			
+  </body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+    <title>韶关一建企业有限公司项目质量安全检查管理系统</title>
+    
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+   
+    <link rel="stylesheet" type="text/css" href="../css/docs.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../css/daterangepicker-bs3.css"/>
+    <!-- Custom styles for this template -->
+    <link href="../css/theme.css" rel="stylesheet">
+    
+    <!-- Custom styles for bootstrap-table -->
+    <link href="../css/bootstrap-table.min.css" rel="stylesheet">
+    <link href="../css/mycss.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]--> 
+  
+  </head>
+
+  <body>
+  	<!-- 头部导航条 -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.php">韶关一建</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.php">项目管理</a></li>
+            <li><a href="../seclect.html">综合查询</a></li>
+            <li><a href="../system.html">系统管理</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="container" class="container">
+    	<div class="row">
+    		<!--左侧导航菜单 -->
+    		<div class="col-md-2">
+    			<div class="bs-docs-sidebar affix" role="complementary">
+    				<ul class="nav bs-docs-sidenav">
+    					<li ><a href="Project_in.html">项目登记</a>
+    					</li>    					
+    					<li class="active" >
+    						<a href="aqxc.html">项目管理</a>
+    						<ul class="nav">
+    							<li  ><a href="aqxc.html">危险源管理</a></li>
+    							<li class="active"><a href="ryqd.html">人员签到</a></li>
+    							<li ><a href="sbgl.html">设备管理</a></li>
+    							<li><a href="xczg.php">巡查整改</a></li>
+    						</ul>
+    					</li>    					
+    					<li><a href="cxfx.html">项目查询</a></li>    				
+    				</ul>
+    			</div>
+    			
+    		</div><!--左侧导航菜单 -->
+    		
+    			<!-- 内容区域 -->
+    		<div class="col-md-10">
+    			<div class="panel panel-info">
+    				<div class="panel-heading">
+    					<h3 class="panel-title">人员签到-韶关一建企业总部大厦</h3>
+    				</div>
+    				<div class="panel-body">
+    					<!-- 表格自定义按钮 -->
+    					<div id="toolbar" class="btn-group">
+    						<!--<button type="button" class="btn btn-default">
+    							<i class="glyphicon glyphicon-plus"> 新建</i>
+    						</button>-->
+    						
+    						<button type="button" class="btn btn-default">
+    							<i class="glyphicon "> 删除</i>
+    						</button>
+    						<button type="button" class="btn dropdown-toggle" id="dropdownMenu1"
+     			 data-toggle="dropdown">
+     			对象
+     				 <span class="caret"></span>
+ 						  </button>
+  						 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    						  <li role="presentation">
+        					 <a role="menuitem" tabindex="-1" href="#"></a>
+     						  </li>
+     						 <li role="presentation">
+        					 <a role="menuitem" tabindex="-1" href="#">施工单位</a>
+     						 </li>
+   							   <li role="presentation">
+    		  				   <a role="menuitem" tabindex="-1" href="#">
+          				  监理单位
+         					</a>
+      						</li>
+      						
+      						<li role="presentation">
+       						  <a role="menuitem" tabindex="-1" href="#">项目负责人</a>
+      						</li>
+  							 </ul>
+    					</div>
+    					<div class="#">
+    						<form>
+    						<fieldset>
+                  <div class="control-group">
+                    
+                    <div class="controls">
+                     <div class="input-prepend input-group">
+                       <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                       <input type="text" style="width: 400px" name="reservation" id="reservationtime" class="form-control" value="08/01/2016 1:00 PM - 08/01/2016 1:30 PM"  class="span4"/>
+                     </div>
+                    </div>
+                  </div>
+                 </fieldset>
+                 </form>
+    					</div>
+    					
+    					
+    					
+    					<table id="table_gclb">
+    						<thead>
+								      <tr>
+								      	 <th><input type="checkbox"></th>
+								         <th>人员</th>
+								         <th>签到时间</th>
+								         
+								      </tr>
+								   </thead>
+								   <tbody>
+								      <tr>
+								        
+								         <td>小陈</td>
+								         <td>2016.12.20</td>
+								      </tr>
+								      <tr>
+								        
+								         <td>小李</td>
+								         <td>2016.12.19</td>
+								      </tr>
+								      <tr>
+								         
+								         <td>小明</td>
+								         <td>2016.12.16</td>
+								      </tr>
+								   </tbody>
+    					</table>
+    				</div>
+    			</div>
+    		</div><!-- 内容区域 -->
+    	</div>
+    </div>
+    
+    <footer class="bs-docs-footer" role="contentinfo"></footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+   <!--js of bootstrap-table -->
+   <script src="../js/bootstrap-table.min.js"></script>
+   <!--js of bootstrap-table—export -->
+   <script src="../js/export/tableExport.js"></script>
+   <script src="../js/export/bootstrap-table-export.js"></script>
+   <script type="text/javascript" src="../js/moment.js"></script>
+	 <script type="text/javascript" src="../js/daterangepicker.js"></script>  
+   <script src="../js/bootstrap-table-zh-CN.min.js"></script>
+   
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/mySidenav.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    	$("footer").load("../footer.html");
+   		;
+    });
+    $('table').bootstrapTable({		
+		striped : true,	//会有隔行变色效果
+		pagination : true,	//表格底部显示分页条
+		pageSize : 10,	//页面数据条数
+		search : true,	//搜索框
+		showRefresh : true,	//刷新按钮
+		showToggle : true,	//切换试图（table/card）按钮
+		showPaginationSwitch : true,	//数据条数选择框
+		showColumns : true,	//内容列下拉框
+		toolbar : "#toolbar",	//指明自定义的菜单
+		showExport : true	//导出按钮
+		
+	});
+    </script>
+     <script type="text/javascript">
+        $(document).ready(function() {
+        $('#reservationtime').daterangepicker({
+          timePicker: true,
+          timePickerIncrement: 30,
+          format: 'MM/DD/YYYY h:mm A'
+          }, function(start, end, label) {
+          console.log(start.toISOString(), end.toISOString(), label);
+          });
+            });
+     </script>
+    
+     <script>  
+        $(function(){  
+            function initTableCheckbox() {  
+                var $thr = $('table thead tr');  
+//              var $checkAllTh = $('<th><input type="checkbox" id="checkAll" name="checkAll" /></th>');  
+//              /*将全选/反选复选框添加到表头最前，即增加一列*/  
+//              $thr.prepend($checkAllTh);  
+//              /*“全选/反选”复选框*/  
+                var $checkAll = $thr.find('input');  
+                $checkAll.click(function(event){  
+                    /*将所有行的选中状态设成全选框的选中状态*/  
+                    $tbr.find('input').prop('checked',$(this).prop('checked'));  
+                    /*并调整所有选中行的CSS样式*/  
+                    if ($(this).prop('checked')) {  
+                        $tbr.find('input').parent().parent().addClass('warning');  
+                    } else{  
+                        $tbr.find('input').parent().parent().removeClass('warning');  
+                    }  
+                    /*阻止向上冒泡，以防再次触发点击操作*/  
+                    event.stopPropagation();  
+                });  
+                /*点击全选框所在单元格时也触发全选框的点击操作*/  
+//              $checkAllTh.click(function(){  
+//                  $(this).find('input').click();  
+//              });  
+                var $tbr = $('table tbody tr');  
+                var $checkItemTd = $('<td><input type="checkbox" name="checkItem" /></td>');  
+                /*每一行都在最前面插入一个选中复选框的单元格*/  
+                $tbr.prepend($checkItemTd);  
+                /*点击每一行的选中复选框时*/  
+                $tbr.find('input').click(function(event){  
+                    /*调整选中行的CSS样式*/  
+                    $(this).parent().parent().toggleClass('warning');  
+                    /*如果已经被选中行的行数等于表格的数据行数，将全选框设为选中状态，否则设为未选中状态*/  
+                    $checkAll.prop('checked',$tbr.find('input:checked').length == $tbr.length ? true : false);  
+                    /*阻止向上冒泡，以防再次触发点击操作*/  
+                    event.stopPropagation();  
+                });  
+                /*点击每一行时也触发该行的选中操作*/  
+                $tbr.click(function(){  
+                    $(this).find('input').click();  
+                });  
+            }  
+            initTableCheckbox();  
+        });  
+        </script>  
+    
+  </body>
+</html>
